@@ -1,9 +1,5 @@
 console.log("=== ESERCITAZIONE 1: BIBLIOTECA DI LIBRI ===\n");
 
-// ============================================================================
-// PARTE 1
-// ============================================================================
-
 const libro1 = {
   titolo: "Il Signore degli Anelli",
   autore: "J.R.R. Tolkien",
@@ -22,22 +18,11 @@ const libro2 = {
   disponibile: false
 };
 
-// ============================================================================
-// PARTE 2
-// ============================================================================
-
-// 2.1
 console.log(`Titolo: ${libro1.titolo} - Autore: ${libro1.autore}`);
 
-// 2.2
 libro2.disponibile = true;
 
-// 2.3
 libro1.isbn = "978-0544003415";
-
-// ============================================================================
-// PARTE 3
-// ============================================================================
 
 const libro3 = {
   titolo: "Il Nome della Rosa",
@@ -65,30 +50,21 @@ const libro3 = {
   }
 };
 
-// Test metodi
 console.log(libro3.getInfo());
 libro3.presta();
 libro3.presta();
 libro3.restituisci();
 
-// ============================================================================
-// PARTE 4
-// ============================================================================
-
-// 4.1
 const biblioteca = [libro1, libro2, libro3];
 
-// 4.2
 function cercaPerAutore(libri, autore) {
   return libri.filter(libro => libro.autore === autore);
 }
 
-// 4.3
 function libriDisponibili(libri) {
   return libri.filter(libro => libro.disponibile);
 }
 
-// 4.4
 function stampaBiblioteca(libri) {
   libri.forEach(libro => {
     console.log(`Titolo: ${libro.titolo}`);
@@ -99,13 +75,8 @@ function stampaBiblioteca(libri) {
   });
 }
 
-// Test
 console.log("\n=== CATALOGO ===");
 stampaBiblioteca(biblioteca);
-
-// ============================================================================
-// PARTE 5 (SFIDA)
-// ============================================================================
 
 function statisticheBiblioteca(libri) {
   const totaleLibri = libri.length;
@@ -127,7 +98,6 @@ function statisticheBiblioteca(libri) {
   };
 }
 
-// Test
 const stats = statisticheBiblioteca(biblioteca);
 
 console.log("\n=== STATISTICHE ===");
