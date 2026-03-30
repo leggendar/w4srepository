@@ -1,0 +1,18 @@
+// Creazione oggetto libro
+const book = {
+  titolo: "Il Signore degli Anelli",
+  autore: "J.R.R. Tolkien",
+  annoPubblicazione: 1954,
+  genere: "Fantasy",
+  numeroPagine: 1200
+};
+
+// Stampa oggetto completo
+console.log("Oggetto libro:");
+console.log(book);
+
+// Stampa proprietà con ciclo for...in
+console.log("\nDettagli libro:");
+for (let key in book) {
+  console.log(`${key} -> ${book[key]}`);
+}
