@@ -1,0 +1,32 @@
+function triangoloTartaglia(righe) {
+    let triangolo = [];
+
+    // Costruzione del triangolo
+    for (let i = 0; i < righe; i++) {
+        triangolo[i] = [];
+        triangolo[i][0] = 1;
+        triangolo[i][i] = 1;
+
+        for (let j = 1; j < i; j++) {
+            triangolo[i][j] = triangolo[i - 1][j - 1] + triangolo[i - 1][j];
+        }
+    }
+
+    // Larghezza fissa per ogni numero (3 caratteri)
+    const larghezza = 4;
+
+    // Stampa centrata
+    for (let i = 0; i < righe; i++) {
+        let riga = "";
+
+        // Spazi iniziali per centrare
+        let spazi = " ".repeat((righe - i - 1) * (larghezza / 2));
+        riga += spazi;
+
+        for (let j = 0; j <= i; j++) {
+            riga += String(triangolo[i][j]).padStart(larghezza, " ");
+        }
+
+        console.log(riga);
+    }
+}
