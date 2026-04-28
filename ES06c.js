@@ -1,6 +1,5 @@
 function triangoloTartaglia(righe) {
     let triangolo = [];
-
     for (let i = 0; i < righe; i++) {
         triangolo[i] = [];
         triangolo[i][0] = 1;
