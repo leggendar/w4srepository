@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Inverti Cifre</title>
+</head>
+<body>
+
+<h2>Inverti le cifre di un numero</h2>
+
+<input type="text" id="numero" placeholder="Inserisci un numero intero">
+<button onclick="mostraRisultato()">Inverti</button>
+
+<p id="risultato"></p>
+
+<script>
+function inverti_cifre(n) {
+    let segno = n < 0 ? -1 : 1;
+    n = Math.abs(n);
+
+    let invertito = parseInt(n.toString().split("").reverse().join(""));
+    return segno * invertito;
+}
+
+function mostraRisultato() {
+    let input = document.getElementById("numero").value;
+    let numero = parseInt(input);
+
+    if (isNaN(numero)) {
+        document.getElementById("risultato").innerText = "Errore: inserisci un numero valido.";
+        return;
+    }
+
+    let risultato = inverti_cifre(numero);
+    document.getElementById("risultato").innerText = "Risultato: " + risultato;
+}
+</script>
+
+</body>
+</html>
