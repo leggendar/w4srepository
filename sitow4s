@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Elenco Esercizi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #38bdf8;
+            font-size: 18px;
+        }
+        a:hover {
+            color: #facc15;
+        }
+    </style>
+</head>
+<body>
 
+<h1>Output Esercizi</h1>
+
+<ul>
+    <li><a href="ES04a1.html" target="_blank">ES04a 1</a></li>
+    <li><a href="ES04a2.html" target="_blank">ES04a 2</a></li>
+    <li><a href="ES04a3.html" target="_blank">ES04a 3</a></li>
+    <li><a href="ES04a4.html" target="_blank">ES04a 4</a></li>
+    <li><a href="ES04b.html" target="_blank">ES04b</a></li>
+    <li><a href="ES04c.html" target="_blank">ES04c</a></li>
+    <li><a href="ES05a.html" target="_blank">ES05a</a></li>
+    <li><a href="ES05b.html" target="_blank">ES05b</a></li>
+    <li><a href="ES05c.html" target="_blank">ES05c</a></li>
+    <li><a href="ES06a.html" target="_blank">ES06a</a></li>
+    <li><a href="ES06c.html" target="_blank">ES06c</a></li>
+</ul>
+
+</body>
+</html>
