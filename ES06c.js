@@ -1,7 +1,6 @@
 function triangoloTartaglia(righe) {
     let triangolo = [];
 
-    // Costruzione del triangolo
     for (let i = 0; i < righe; i++) {
         triangolo[i] = [];
         triangolo[i][0] = 1;
@@ -12,14 +11,11 @@ function triangoloTartaglia(righe) {
         }
     }
 
-    // Larghezza fissa per ogni numero (3 caratteri)
     const larghezza = 4;
 
-    // Stampa centrata
     for (let i = 0; i < righe; i++) {
         let riga = "";
 
-        // Spazi iniziali per centrare
         let spazi = " ".repeat((righe - i - 1) * (larghezza / 2));
         riga += spazi;
 
