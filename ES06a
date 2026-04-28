@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolatrice Semplice</title>
+</head>
+<body>
+
+<h2>Calcolatrice</h2>
+
+<label>Primo numero:</label>
+<input type="text" id="num1"><br><br>
+
+<label>Secondo numero:</label>
+<input type="text" id="num2"><br><br>
+
+<label>Operazione (+, -, *, /, **):</label>
+<input type="text" id="operazione"><br><br>
+
+<button onclick="calcola()">Calcola</button>
+
+<p id="risultato"></p>
+
+<script>
+function calcola() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let operazione = document.getElementById("operazione").value;
+    let risultato;
+
+    try {
+        if (isNaN(num1) || isNaN(num2)) {
+            throw "Numeri non validi";
+        }
+
+        if (operazione === "+") {
+            risultato = num1 + num2;
+        } else if (operazione === "-") {
+            risultato = num1 - num2;
+        } else if (operazione === "*") {
+            risultato = num1 * num2;
+        } else if (operazione === "/") {
+            if (num2 === 0) {
+                throw "Divisione per zero";
+            }
+            risultato = num1 / num2;
+        } else if (operazione === "**") {
+            risultato = num1 ** num2;
+        } else {
+            throw "Operazione non valida";
+        }
+
+        document.getElementById("risultato").innerText = "Risultato: " + risultato;
+
+    } catch (errore) {
+        document.getElementById("risultato").innerText = "Errore: " + errore;
+    }
+}
+</script>
+
+</body>
+</html>
