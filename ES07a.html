@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oggetto Window</title>
+</head>
+<body>
+
+<button onclick="mostraWindow()">Mostra proprietà Window</button>
+
+<p id="risultato"></p>
+
+<script>
+function mostraWindow() {
+
+    document.getElementById("risultato").innerHTML =
+        "Larghezza finestra: " + window.innerWidth + "<br>" +
+        "Altezza finestra: " + window.innerHeight + "<br>" +
+        "URL pagina: " + window.location.href;
+}
+</script>
+
+</body>
+</html>
