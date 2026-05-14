@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oggetto Navigator</title>
+</head>
+<body>
+
+<button onclick="mostraNavigator()">Mostra proprietà Navigator</button>
+
+<p id="info"></p>
+
+<script>
+function mostraNavigator() {
+
+    document.getElementById("info").innerHTML =
+        "Browser: " + navigator.appName + "<br>" +
+        "Lingua: " + navigator.language + "<br>" +
+        "Sistema operativo: " + navigator.platform;
+}
+</script>
+
+</body>
+</html>
